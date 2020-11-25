@@ -1,0 +1,13 @@
+1. Em quais linguagens o C# foi inspirado?
+R.O C# tem sua sintaxe baseada na linguagem C++ e possui influência de outras linguagens como Delphi e Java.
+
+2. Inicialmente o C# foi criado para qual finalidade?
+Possibilitar a criação de soluções na plataforma .NET Framework
+
+3. Quais os principais motivos para a Microsoft ter migrado para o Core?
+Tornar o framework multiplataforma e melhorar sua performance.
+
+4. Cite as principais diferenças entre .Net Full Framework e .Net Core.
+Soluções .NET Framwork são compatíveis apenas com windows e as soluções .NET Core são multiplataforma
+.NET Framwork não permite instalações side-by-side e o .NET Core sim
+Incompatibilidade entre componentes que utilizam uma versão ou outra
