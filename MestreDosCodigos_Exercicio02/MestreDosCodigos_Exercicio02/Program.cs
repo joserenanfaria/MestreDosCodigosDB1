@@ -13,47 +13,35 @@ namespace MestreDosCodigos_Exercicio02
             List<Funcionario> listaFuncionarios = new List<Funcionario>();
             bool continuarAdicinando = true;
 
-      
+
             while (continuarAdicinando)
             {
 
                 listaFuncionarios.Add(new Funcionario(SolicitarNomeFuncionario(), SolicitarSalarioFuncionario()));
 
-                Console.WriteLine("");
-                Console.WriteLine("Funcionário adicionado!");
+                Console.WriteLine("\nFuncionário adicionado!");
 
                 continuarAdicinando = validarSeContinuaAdicionandoFuncionario();
             }
 
-            Console.WriteLine("");
-            Console.WriteLine("Resultados:");
+            Console.WriteLine("\nResultados:");
             ExibirFuncionarioComMaiorSalario(listaFuncionarios);
             ExibirFuncionarioComMenorSalario(listaFuncionarios);
 
             Console.ReadKey();
-
         }
 
         private static bool validarSeContinuaAdicionandoFuncionario()
         {
-            Console.WriteLine("");
-            Console.Write("Deseja adicionar mais funcionários (S/N)? ");
-            string adicionarMaisFuncionarios = Console.ReadLine().ToUpper();            
-
-            if ((!adicionarMaisFuncionarios.Equals("S")) && (!adicionarMaisFuncionarios.Equals("N")))
-            {
-                Console.WriteLine("Operação inválida - Digite a letra S para SIM ou a letra N para NÃO");
-                validarSeContinuaAdicionandoFuncionario();
-            }
-
-            return adicionarMaisFuncionarios.Equals("S");
+            Console.Write("\nDeseja adicionar mais funcionários (S/N)? ");
+            return Console.ReadLine().ToUpper().Equals("S");
         }
 
         static void ExibirFuncionarioComMaiorSalario(List<Funcionario> listaFuncionarios)
         {
             var funcionarioComMaiorSalario = VerificarFuncionarioComMaiorSalario(listaFuncionarios);
 
-            Console.WriteLine("Funcionário com maior salario é o {0} com salário de R$ {1}",
+            Console.WriteLine("\nFuncionário com maior salario é o {0} com salário de R$ {1}",
                 funcionarioComMaiorSalario.Nome,
                 funcionarioComMaiorSalario.Salario.ToString("F2", CultureInfo.InvariantCulture));
         }
@@ -62,7 +50,7 @@ namespace MestreDosCodigos_Exercicio02
         {
             var funcionarioComMenorSalario = VerificarFuncionarioComMenorSalario(listaFuncionarios);
 
-            Console.WriteLine("Funcionário com menor salario é o {0} com salário de R$ {1}",
+            Console.WriteLine("\nFuncionário com menor salario é o {0} com salário de R$ {1}",
                 funcionarioComMenorSalario.Nome,
                 funcionarioComMenorSalario.Salario.ToString("F2", CultureInfo.InvariantCulture));
         }
@@ -105,29 +93,14 @@ namespace MestreDosCodigos_Exercicio02
 
         static string SolicitarNomeFuncionario()
         {
-            Console.WriteLine("");
-            Console.Write("Digite o nome do funcionário: ");
-            string nomeFuncionario = Console.ReadLine();
-
-            return nomeFuncionario;
+            Console.Write("\nDigite o nome do funcionário: ");
+            return Console.ReadLine();
         }
 
         static double SolicitarSalarioFuncionario()
         {
-            Console.Write("Digite o salário do funcionário: ");
-            double salarioFuncionario = 0;
-
-            try
-            {
-                salarioFuncionario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Valor inválido - refaça a operação");
-                SolicitarSalarioFuncionario();
-            }           
-
-            return salarioFuncionario;
+            Console.Write("\nDigite o salário do funcionário: ");
+            return double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
         }
     }
 }

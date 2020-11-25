@@ -24,6 +24,8 @@ namespace MestreDosCodigos_Exercicio06
             InverteNome(nome, out string nomeInvertido);
 
             Console.WriteLine($"\nSeu nome invertido: {nomeInvertido}");
+
+            Console.ReadKey();
         }
 
         public static void PrimeirasLetrasEmMaiusculo(ref string nome)

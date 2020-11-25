@@ -34,7 +34,7 @@ namespace MestreDosCodigos_Exercicio07
 
             Console.WriteLine($"\nA soma dos números inteiros pares é: {somaNumerosPares}");
 
-            
+            Console.ReadKey();
         }
     }
 }

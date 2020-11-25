@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace MestreDosCodigos_Exercicio04
 {
@@ -15,17 +16,14 @@ namespace MestreDosCodigos_Exercicio04
             while (ContinuarAdicionandoAlunos)
             {
                 Alunos.Add(SolicitarAluno());
-                Console.WriteLine("");
-                Console.WriteLine("Aluno adicionado!");
+                Console.WriteLine("\nAluno adicionado!");
 
                 ContinuarAdicionandoAlunos = validarSeContinuaAdicionandoAlunos();
             }
 
-            Console.WriteLine("");
-            Console.WriteLine("Alunos adicionados com sucesso!");
+            Console.WriteLine("\nAlunos adicionados com sucesso!");
 
-            Console.WriteLine("");
-            Console.WriteLine("Alunos com média >= 7: ");
+            Console.WriteLine("\nAlunos com média >= 7: ");
 
             foreach (Aluno aluno in Alunos)
             {
@@ -41,8 +39,7 @@ namespace MestreDosCodigos_Exercicio04
 
         static Aluno SolicitarAluno()
         {
-            Console.WriteLine("");
-            Console.Write("Digite o NOME do aluno: ");
+            Console.Write("\nDigite o NOME do aluno: ");
             string nomeAluno = Console.ReadLine();
 
 
@@ -52,58 +49,32 @@ namespace MestreDosCodigos_Exercicio04
             while (ContinuaAdicionandoNotas)
             {
                 notasAluno.Add(SolicitarNotaAluno());
-                Console.WriteLine("");
-                Console.WriteLine("Nota adicionada!");
+                Console.WriteLine("\nNota adicionada!");
 
                 ContinuaAdicionandoNotas = validarSeContinuaAdicionandoNotas();
             }
-
-            Console.WriteLine("");
-            Console.WriteLine($"Notas do aluno {nomeAluno} adicionadas com sucesso!");
+            Console.WriteLine($"\nNotas do aluno {nomeAluno} adicionadas com sucesso!");
 
             return new Aluno(nomeAluno, notasAluno);
         }
 
         static bool validarSeContinuaAdicionandoAlunos()
         {
-            Console.WriteLine("");
-            Console.Write("Deseja adicionar mais aluno (S/N)? ");
-            string adicionarAlunos = Console.ReadLine().ToUpper();
-
-            if ((!adicionarAlunos.Equals("S")) && (!adicionarAlunos.Equals("N")))
-            {
-                Console.WriteLine("");
-                Console.WriteLine("Operação inválida - Digite a letra S para SIM ou a letra N para NÃO");
-                validarSeContinuaAdicionandoAlunos();
-            }
-
-            return adicionarAlunos.Equals("S");
+            Console.Write("\nDeseja adicionar mais alunos (S/N)? ");
+            return Console.ReadLine().ToUpper().Equals("S");
         }
 
         static bool validarSeContinuaAdicionandoNotas()
         {
-            Console.WriteLine("");
-            Console.Write("Deseja adicionar mais notas para o aluno (S/N)? ");
-            string adicionarNotas = Console.ReadLine().ToUpper();
-
-            if ((!adicionarNotas.Equals("S")) && (!adicionarNotas.Equals("N")))
-            {
-                Console.WriteLine("");
-                Console.WriteLine("Operação inválida - Digite a letra S para SIM ou a letra N para NÃO");
-                validarSeContinuaAdicionandoNotas();
-            }
-
-            return adicionarNotas.Equals("S");
+            Console.Write("\nDeseja adicionar mais notas para o aluno (S/N)? ");
+            return Console.ReadLine().ToUpper().Equals("S");
         }
 
 
         static double SolicitarNotaAluno()
         {
-            Console.WriteLine("");
-            Console.Write("Digite a NOTA do aluno: ");
-            var nota = double.Parse(Console.ReadLine());
-
-            return nota;
+            Console.Write("\nDigite a NOTA do aluno: ");
+            return double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace MestreDosCodigos_Exercicio01
         }
 
         static void Executar()
-        {           
+        {
             Console.WriteLine("** Manipulando variáveis **");
             Console.WriteLine("");
 
@@ -32,21 +32,21 @@ namespace MestreDosCodigos_Exercicio01
 
             opcoes opcaoSelecionada = Menu();
 
-            Console.WriteLine("");            
+            Console.WriteLine("");
 
             switch (opcaoSelecionada)
             {
                 case opcoes.Soma:
-                    Console.WriteLine("Resultado: {0} ", Somar(valorA, valorB));
+                    Console.WriteLine($"Resultado: {Somar(valorA, valorB)}");
                     break;
                 case opcoes.Subtracao:
-                    Console.WriteLine("Resultado: {0} ", Subtrair(valorA, valorB));
+                    Console.WriteLine($"Resultado: {Subtrair(valorA, valorB)}");
                     break;
                 case opcoes.Divisao:
-                    Console.WriteLine("Resultado: {0} ", Dividir(valorA, valorB));
+                    Console.WriteLine($"Resultado: {Dividir(valorA, valorB)}");
                     break;
                 case opcoes.Multiplicacao:
-                    Console.WriteLine("Resultado: {0} ", Multiplicar(valorA, valorB));
+                    Console.WriteLine($"Resultado: {Multiplicar(valorA, valorB)}");
                     break;
                 case opcoes.ParidadeDosValores:
                     ExibirParidadeDosValores(valorA, valorB);
@@ -66,7 +66,7 @@ namespace MestreDosCodigos_Exercicio01
         {
             StringBuilder menu = new StringBuilder();
 
-            menu.AppendLine("");            
+            menu.AppendLine("");
             menu.AppendLine("Selecione a opção desejada abaixo:");
             menu.AppendLine("1 - Somar valores (A + B)");
             menu.AppendLine("2 - Subtrair valores (A - B)");
@@ -75,34 +75,25 @@ namespace MestreDosCodigos_Exercicio01
             menu.AppendLine("5 - Exibir os valores e suas respectivas paridades");
             menu.AppendLine("6 - Exibir todos os resultados das opções acima");
             menu.AppendLine("7 - Trocar os valores de A e B");
-
             menu.AppendLine("0 - Sair");
 
             Console.WriteLine(menu.ToString());
 
             int opcaoSelecionada = 0;
 
-            try
-            {
-                opcaoSelecionada = int.Parse(Console.ReadLine());
+            opcaoSelecionada = int.Parse(Console.ReadLine());
 
-                if (opcaoSelecionada == 0){
-                    System.Environment.Exit(0);
-                }
-
-                if (opcaoSelecionada > 7 || opcaoSelecionada < 0)
-                {
-                    Console.WriteLine("Opção inválida - Tente novamente");
-                    Console.WriteLine("");
-                    Menu();
-                }                
-            }
-            catch (FormatException)
+            if (opcaoSelecionada == 0)
             {
-                Console.WriteLine("Opção inválida - Tente novamente");
-                Console.WriteLine("");
-                Menu();
+                System.Environment.Exit(0);
             }
+
+            if (opcaoSelecionada > 7 || opcaoSelecionada < 0)
+            {
+                Console.WriteLine("Opção inválida");
+                throw new Exception();
+            }
+
             opcaoSelecionada -= 1;
             return (opcoes)opcaoSelecionada;
         }
@@ -110,17 +101,8 @@ namespace MestreDosCodigos_Exercicio01
         static double SolicitarValorA()
         {
             Console.Write("Digite o valor de A: ");
-            double valorA = 0.0;
-            try
-            {
-                valorA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Valor A inválido - Tente novamente");
-                Console.WriteLine("");
-                SolicitarValorA();
-            }
+
+            double valorA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             return valorA;
         }
@@ -128,17 +110,8 @@ namespace MestreDosCodigos_Exercicio01
         static double SolicitarValorB()
         {
             Console.Write("Digite o valor de B: ");
-            double valorB = 0.0;
-            try
-            {
-                valorB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Valor B inválido - Tente novamente");
-                Console.WriteLine("");
-                SolicitarValorB();
-            }
+
+            double valorB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             return valorB;
         }
@@ -172,7 +145,7 @@ namespace MestreDosCodigos_Exercicio01
                 paridadeA = "Par";
             }
 
-            Console.WriteLine("Valor de A é {0}", paridadeA);
+            Console.WriteLine($"Valor de A é {paridadeA}");
 
             string paridadeB = "Ímpar";
 
@@ -181,16 +154,16 @@ namespace MestreDosCodigos_Exercicio01
                 paridadeB = "Par";
             }
 
-            Console.WriteLine("Valor de B é {0}", paridadeB);
+            Console.WriteLine($"Valor de B é {paridadeB}");
 
         }
 
         static void ExibirTodosOsResultados(double valorA, double valorB)
         {
-            Console.WriteLine("Resultado da Soma: {0} ", Somar(valorA, valorB));
-            Console.WriteLine("Resultado da Subtração: {0} ", Subtrair(valorA, valorB));
-            Console.WriteLine("Resultado da Divisão: {0} ", Dividir(valorA, valorB));
-            Console.WriteLine("Resultado da Multiplicação: {0} ", Multiplicar(valorA, valorB));
+            Console.WriteLine($"Resultado da Soma: {Somar(valorA, valorB)}");
+            Console.WriteLine($"Resultado da Subtração: {Subtrair(valorA, valorB)}");
+            Console.WriteLine($"Resultado da Divisão: {Dividir(valorA, valorB)}");
+            Console.WriteLine($"Resultado da Multiplicação: {Multiplicar(valorA, valorB)}");
             ExibirParidadeDosValores(valorA, valorB);
         }
     }
