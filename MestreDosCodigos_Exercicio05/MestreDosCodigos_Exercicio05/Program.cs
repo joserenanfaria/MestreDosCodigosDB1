@@ -6,7 +6,7 @@ namespace MestreDosCodigos_Exercicio05
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Calcular fórmula de Bhaskara");
+            Console.WriteLine("** Calcular fórmula de Bhaskara **");
 
             Console.WriteLine("");
             Console.Write("Insira o valor de A: ");

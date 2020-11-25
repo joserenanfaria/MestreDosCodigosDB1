@@ -7,7 +7,7 @@ namespace MestreDosCodigos_Exercicio04
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Listagem de alunos com média maior que 7");
+            Console.WriteLine("** Listagem de alunos com média maior que 7 **");
 
             var Alunos = new List<Aluno>();
             bool ContinuarAdicionandoAlunos = true;
