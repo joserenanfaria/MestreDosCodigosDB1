@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.Linq;
 
 namespace MestreDosCodigos_Exercicio06
 {
@@ -9,7 +8,7 @@ namespace MestreDosCodigos_Exercicio06
         static void Main(string[] args)
         {
             Console.WriteLine("** Diferença entre os modificadores de parâmetro REF e OUT **");
-           
+
             Console.Write("\nDigite seu nome com todas as letras em minúsculo: ");
             string nome = Console.ReadLine();
 

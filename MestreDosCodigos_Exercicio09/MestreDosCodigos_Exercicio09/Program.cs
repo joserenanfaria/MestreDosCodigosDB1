@@ -60,8 +60,8 @@ namespace MestreDosCodigos_Exercicio09
             {
                 Console.WriteLine($"Array posição {i}: {arr[i]}");
             }
-     
-            
+
+
             Console.ReadKey();
 
         }

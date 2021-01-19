@@ -25,7 +25,7 @@ namespace MestreDosCodigos_Exercicio05
             double raizDeDelta = Math.Sqrt(delta);
             Console.WriteLine($"\nValor da raiz quadrada de delta: {raizDeDelta}");
 
-            var x1 = ((-b) + raizDeDelta) / (2 * a);            
+            var x1 = ((-b) + raizDeDelta) / (2 * a);
             Console.WriteLine($"\nValor de x1: {x1}");
 
             var x2 = ((-b) - raizDeDelta) / (2 * a);

@@ -24,7 +24,7 @@ namespace MestreDosCodigos_Exercicio02
             Funcionario funcionarioComparacao = obj as Funcionario;
 
             return Salario.CompareTo(funcionarioComparacao.Salario);
-            
+
         }
     }
 }

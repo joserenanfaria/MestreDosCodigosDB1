@@ -12,7 +12,7 @@ namespace MestreDosCodigos_Exercicio03
 
             while (i <= 100)
             {
-                if((i % 3) == 0)
+                if ((i % 3) == 0)
                 {
                     Console.WriteLine(i);
                 }
