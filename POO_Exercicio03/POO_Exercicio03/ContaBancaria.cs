@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace POO_Exercicio03
+﻿namespace POO_Exercicio03
 {
     public abstract class ContaBancaria
     {

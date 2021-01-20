@@ -15,8 +15,8 @@ namespace POO_Exercicio03
             contaEspecial.Depositar(100);
             Console.WriteLine("\n" + contaEspecial.MostrarDados());
             Console.WriteLine("\nSacar 900,00 R$");
-            contaEspecial.Sacar(900);            
-            Console.WriteLine("\n" + contaEspecial.MostrarDados());            
+            contaEspecial.Sacar(900);
+            Console.WriteLine("\n" + contaEspecial.MostrarDados());
 
             ContaCorrente contaCorrente = new ContaCorrente("0002", 800, 10);
 

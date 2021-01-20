@@ -15,10 +15,10 @@ namespace POO_Exercicio02
             Altura = altura;
         }
 
-        public int CalcularIdade() => 
+        public int CalcularIdade() =>
             DateTime.Now.Year - DataNascimento.Year;
 
-        public string ImprimirDados() => 
+        public string ImprimirDados() =>
             $"Dados Pessoa: \nNome: {Nome} \nData Nascimento: {DataNascimento:dd/MM/yyyy} \nAltura: {Altura}";
     }
 }

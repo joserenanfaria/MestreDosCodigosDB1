@@ -15,7 +15,7 @@ namespace POO_Exercicio03
 
         public override void Sacar(double valor)
         {
-            if(valor > Saldo)
+            if (valor > Saldo)
             {
                 throw new InvalidOperationException("Valor do saque é maior que o saldo disponível na conta");
             }
