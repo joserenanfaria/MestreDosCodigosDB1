@@ -20,7 +20,7 @@ namespace POO_Exercicio03
                 throw new InvalidOperationException("Valor do saque é maior que o saldo disponível na conta");
             }
 
-            Saldo -= (valor - TaxaDeOperacao);
+            Saldo -= (valor + TaxaDeOperacao);
         }
 
         public string MostrarDados()

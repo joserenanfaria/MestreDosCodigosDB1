@@ -11,10 +11,7 @@ namespace POO_Exercicio03
             Limite = limite;
         }
 
-        public override void Depositar(double valor)
-        {
-            Saldo += valor;
-        }
+        public override void Depositar(double valor) => Saldo += valor;
 
         public override void Sacar(double valor)
         {
