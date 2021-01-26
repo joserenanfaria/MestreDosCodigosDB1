@@ -1,0 +1,28 @@
+O que é POO?
+É uma sigla para programação orientada a objetos.
+
+O que é polimorfismo?
+É a capacidade de uma determinada classe de sobrepor os comportamentos herdados de uma classe mãe.
+
+O que é abstração?
+É uma forma de pensar em cenários mais abstratos, utilizado para desenhar soluções melhores ao desenvolver software
+
+O que é encapsulamento?
+Encapsulamento serve para controlar o acesso aos componentes de uma classe.
+
+Quando usar uma classe abstrata e quando devo usar uma interface?
+
+Classe abstrata: 
+Necessitar de algum comportamento padrão para as classes que vão herdar a classe abstrata
+
+Interface:
+Necessitar de um contrato padrão para as classes que vão implementar a interface, definindo apenas assinatura, não comportamento.
+
+O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
+IDisposable - Obriga a implementação do método Dispose, permitindo realizar ações ao liberar os objetos da memória.
+IComparable - Obriga a implementação do método CompareTo(Object), utilizado para ordenação.
+ICloneable - Obriga a implementação do método Clone, retornando um clone do objeto.
+IEnumerable - Torna possível iterar o objeto.
+
+Existe herança múltipla (de classes) em C#?
+Não.
