@@ -40,7 +40,7 @@ namespace TestesUnitarios
             double valorSaque = 900;
             double valorSaldo = 500;
             double valorTaxa = 0;
-            var contaCorrente = new ContaCorrente("0001", valorSaldo, valorTaxa);     
+            var contaCorrente = new ContaCorrente("0001", valorSaldo, valorTaxa);
 
             Assert.Throws<InvalidOperationException>(() => contaCorrente.Sacar(valorSaque));
         }
@@ -104,7 +104,7 @@ namespace TestesUnitarios
             double valorDeposito = 300;
             double valorSaldo = 0;
             double valorTaxa = 10;
-            double valorEsperado = valorSaldo +(valorDeposito - valorTaxa);
+            double valorEsperado = valorSaldo + (valorDeposito - valorTaxa);
             var contaCorrente = new ContaCorrente("0001", valorSaldo, valorTaxa);
 
             contaCorrente.Depositar(valorDeposito);

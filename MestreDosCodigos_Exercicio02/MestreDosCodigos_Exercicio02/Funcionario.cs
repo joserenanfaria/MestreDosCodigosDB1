@@ -3,7 +3,7 @@ using System;
 
 namespace MestreDosCodigos_Exercicio02
 {
-    class Funcionario : IComparable
+    public class Funcionario : IComparable
     {
         public string Nome { get; private set; }
         public double Salario { get; private set; }

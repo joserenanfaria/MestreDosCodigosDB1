@@ -1,5 +1,4 @@
 ﻿using POO_Exercicio04;
-using System;
 using Xunit;
 
 namespace TestesUnitarios
@@ -28,6 +27,15 @@ namespace TestesUnitarios
             Assert.Equal(controleRemoto.ConsultarCanal(), canalEsperado);
         }
 
+        [Fact]
+        public void TrocarCanal_TrocarParaCanalEspecifico_DeveTrocarParaCanalEspecifico()
+        {
+            var controleRemoto = new ControleRemoto(new Televisao());
+            int canalEsperado = 7;
 
+            controleRemoto.TrocarParaCanalIndicado(7);
+
+            Assert.Equal(controleRemoto.ConsultarCanal(), canalEsperado);
+        }
     }
 }
