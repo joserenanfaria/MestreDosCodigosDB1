@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\POO_Exercicio03\POO_Exercicio03\POO_Exercicio03.csproj" />
-    <ProjectReference Include="..\POO_Exercicio04\POO_Exercicio04\POO_Exercicio04.csproj" />
+    <ProjectReference Include="..\..\POO_Exercicio03\POO_Exercicio03\POO_Exercicio03.csproj" />
+    <ProjectReference Include="..\..\POO_Exercicio04\POO_Exercicio04\POO_Exercicio04.csproj" />
   </ItemGroup>
 
 </Project>
